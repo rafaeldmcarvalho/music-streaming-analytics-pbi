@@ -30,6 +30,12 @@ Before importing to Power BI, the data underwent a cleaning process using Python
 - **Feature Engineering:** Calculated user **Tenure** (months/years) based on a reference data (2025-12-31).
 - **Data Quality:** Verified and handled outliers in listening habits.
 
+## 📐 Data Modeling (Star Schema)
+To optimize performance and filtering, the flat dataset was restructured into a **Star Schema**:
+- **Fact Table:** `spotify_cleaned` containing metrics like listening hours, skips, and user status.
+- **Dimension Tables:** Created specific dimensions for `Country`, `Subscription`, `Genre`, and `Primary Device`.
+- **Relationships:** Established 1:N (one-to-many) relationships using Surrogate Keys (Index) to ensure data integrity and faster report rendering.
+
 ---
 ## 🚀 How to View the Project
 1. Clone the repository.
