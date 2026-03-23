@@ -26,3 +26,10 @@ This project provides a comprehensive analysis of user engagement, subscription 
 1. Clone the repository.
 2. Open the `.pbix` file in **Power BI Desktop**.
 3. *[Optional]* Link to Power BI Service (if published).
+
+---
+## ⚙️ Environment Setup
+To replicate this project's environment, use Conda:
+```bash
+conda create --name spotify-env python=3.12 pandas ipykernel
+conda activate spotify-env
