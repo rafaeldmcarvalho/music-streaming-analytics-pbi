@@ -1,0 +1,8 @@
+# Python junk
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+
+# Power BI temp files
+*.tmp
