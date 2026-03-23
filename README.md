@@ -36,6 +36,11 @@ To optimize performance and filtering, the flat dataset was restructured into a 
 - **Dimension Tables:** Created specific dimensions for `Country`, `Subscription`, `Genre`, and `Primary Device`.
 - **Relationships:** Established 1:N (one-to-many) relationships using Surrogate Keys (Index) to ensure data integrity and faster report rendering.
 
+## 📅 Time Intelligence (dCalendar)
+To enable advanced temporal analysis, a dedicated **dCalendar** table was implemented using DAX.
+- **Dynamic Range:** Spans from the earliest `signup_date` to the reference date (2025-12-31).
+- **Attributes:** Includes Year, Month Name, Month Number, Quarter, and Year-Month strings.
+- **Key Feature:** Established a 1:N relationship with the fact table, allowing for Time Intelligence calculations (e.g., Year-over-Year growth, Monthly Trends).
 ---
 ## 🚀 How to View the Project
 1. Clone the repository.
