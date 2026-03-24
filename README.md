@@ -5,9 +5,9 @@ This project provides a comprehensive analysis of user engagement, subscription 
 
 ## 🎯 Key Business Questions
 - **Conversion Efficiency:** What is the specific user profile (Age/Country/Device/Most Liked Feature) that converts most effectively from ads to subscriptions?
-- 
-- 
-- 
+- **Feature-Led Growth:** Which app features (e.g., Discover Weekly, AI DJ) are most strongly correlated with successful user upgrades?
+- **User Retention & Health:** How do engagement levels (Activity Index) and music satisfaction (MSS) vary across demographic segments?
+- **Monetization Strategy:** What is the estimated long-term value (LTV) of a converted user and how is the subscription mix distributed?
 
 ## 📂 Project Structure
 - `data/`: Contains the raw CSV dataset.
@@ -22,6 +22,20 @@ This project provides a comprehensive analysis of user engagement, subscription 
 - **Data Visualization:** Power BI Desktop
 - **Calculations:** DAX (Data Analysis Expressions)
 - **Documentation:** Markdown / GitHub
+
+## 📖 Data Dictionary
+The analysis is based on a dataset of 50,000 records. Below are the definitions for the key fields used:
+
+* **`user_id`**: Unique identifier assigned to each user.
+* **`country`**: Geographic location of the user.
+* **`age`**: User's age at the time of data collection.
+* **`signup_date`**: The date when the user first joined the platform.
+* **`subscription_type`**: Current plan tier (e.g., Free, Premium, Family, Student).
+* **`subscription_status`**: Current state of the account (Active or Inactive).
+* **`months_inactive`**: Total count of months without platform activity.
+* **`inactive_3_months_flag`**: Binary indicator (1 = Inactive for 3+ months, 0 = Active). Used for churn risk modeling.
+* **`ad_interaction`**: Indicates if the user interacted with ads during their session.
+* **`ad_conversion_to_subscription`**: Indicates if an ad interaction directly led to a paid subscription upgrade.
 
 ## ⚙️ ETL Process (Python)
 Before importing to Power BI, the data underwent a cleaning process to ensure analytical quality:
