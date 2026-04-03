@@ -41,10 +41,10 @@ The analysis is based on a dataset of 50,000 records. Below are the definitions 
 ## 🧮 Key Metrics & DAX Calculations
 To drive business insights, I developed the following measures in Power BI:
 
-* **Ad Conversion Rate:** Evaluates the effectiveness of advertisements in driving premium upgrades.
+* **Avg. Conversion Rate:** Evaluates the effectiveness of advertisements in driving premium upgrades.
     * **Formula:** `DIVIDE(SUM(ad_conversion_to_subscription), SUM(ad_interaction), 0)`
 
-* **Activity Index:** Measures the health of the user base by calculating the inverse of the 3-month churn rate.
+* **User Retention Rate:** Measures the health of the user base by calculating the inverse of the 3-month churn rate.
     * **Formula:** `1 - DIVIDE(CALCULATE(COUNT(user_id), inactive_3_months_flag = 1), COUNT(user_id))`
 
 * **Average Tenure (Months):** Represents the expected lifecycle of a user on the platform.
